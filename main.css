@@ -54,8 +54,33 @@ img {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
+.three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.125rem;
+  row-gap: 3.75rem;
+}
 .landing-gap {
   column-gap: 2.548rem;
+}
+.bg-gray {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.bg-gray::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    #f8f8f8 -45.04%,
+    rgba(248, 248, 248, 0) 88.56%
+  );
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
 }
 .Featuers {
   column-gap: 10.593rem;
@@ -63,6 +88,16 @@ img {
 }
 .bold {
   font-weight: bold;
+}
+.get-started {
+  margin-top: 3.125rem;
+  color: var(--white-bg);
+  background-color: var(--main-color);
+  padding: 1.094rem 4.844rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  box-shadow: 0 1.2rem 1.7rem 0 #f5383859;
+  transition: var(--main-transtion);
 }
 .main-heading {
   font-size: 2.188rem;
@@ -149,18 +184,6 @@ img {
   font-weight: var(--font-weight-500);
 }
 
-.get-started {
-  width: 15.625rem;
-  height: 3.75rem;
-  margin-top: 3.125rem;
-  color: var(--white-bg);
-  background-color: var(--main-color);
-  padding: 1.094rem 4.844rem;
-  border-radius: 1rem;
-  font-weight: 700;
-  box-shadow: 0 1.2rem 1.7rem 0 #f5383859;
-  transition: var(--main-transtion);
-}
 /* End Landing */
 
 /* Start Features */
@@ -209,25 +232,6 @@ img {
 }
 /* End Features */
 /* Start Plans*/
-.plans {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-}
-
-.plans::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(
-    180deg,
-    #f8f8f8 -45.04%,
-    rgba(248, 248, 248, 0) 88.56%
-  );
-  width: 100vw;
-  height: 100%;
-  z-index: -1;
-}
 
 .plan-heading {
   height: 3.125rem;
@@ -313,3 +317,53 @@ img {
   gap: 3.711rem;
 }
 /* End Testimonials */
+/* Strat opinions*/
+
+.opinion-box {
+  border: 2px solid #dddddd;
+  background-color: var(--white-bg);
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+  height: 14.375rem;
+}
+
+.customer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.customer-details {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.opinion-text {
+  font-weight: var(--font-weight-400);
+  line-height: 1.875rem;
+}
+.buttols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 1/-1;
+}
+.arrow {
+  cursor: pointer;
+}
+/* End opinions */
+
+/* End opinions */
+.space-between {
+  justify-content: space-between;
+}
+.height-60px {
+  height: 3.75rem;
+}
+/* End opinions */
