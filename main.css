@@ -26,6 +26,10 @@ html {
 img {
   max-width: 100%;
 }
+
+input[type="checkbox"] {
+  display: none;
+}
 /* End reset */
 
 /* Start Variables */
@@ -39,17 +43,24 @@ img {
   --dark-blue: #0b132a;
   --font-weight-500: 500;
   --font-weight-400: 400;
-  --max-width: 1440px;
+  --max-width-desktop: 1200px;
+  --max-width-tablet: 750px;
+  --max-width-mobile: 500px;
   --main-transtion: 0.3s;
 }
 /* End Variables */
 
 /* Start Global Styles  */
 .container {
-  max-width: var(--max-width);
+  max-width: var(--max-width-desktop);
   margin: 0 auto;
   display: grid;
   row-gap: 7.259rem;
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: var(--max-width-tablet);
+  }
 }
 .card {
   grid-column: 1/-1;
@@ -60,21 +71,44 @@ img {
   border-radius: 1rem;
   padding: 2.326rem 5.688rem;
   justify-content: center;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .card {
+    flex-wrap: wrap;
+  }
 }
 .card-footer-pd {
   margin: -4.064rem 0;
-  max-height: 14.375rem;
+}
+@media (max-width: 1024px) {
+  .card-footer-pd {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 }
 .Section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .Section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 5rem;
+  }
+}
 .three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3.125rem;
   row-gap: 3.75rem;
+}
+@media (max-width: 1024px) {
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
 }
 .landing-gap {
   column-gap: 2.548rem;
@@ -140,6 +174,23 @@ img {
 }
 /* End Global Styles  */
 
+/* Start bar toggel */
+.bar {
+  width: 2.6rem;
+  height: 0.3rem;
+  margin-bottom: 0.5rem;
+  background-color: black;
+  transition: var(--main-transtion);
+}
+.toggle {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .toggle {
+    display: block;
+  }
+}
+/* End bar toggel */
 /* Satrt Hearder */
 .header {
   display: flex;
@@ -150,6 +201,15 @@ img {
 .links-list {
   display: flex;
   gap: 4rem;
+}
+@media (max-width: 1024px) {
+  .links-list {
+    display: none;
+  }
+  .sing-in,
+  .sing-up {
+    display: none;
+  }
 }
 .links {
   font-weight: var(--font-weight-400);
@@ -221,6 +281,12 @@ img {
   border-left: 0.2rem solid #eeeff2;
   border-right: 0.2rem solid #eeeff2;
 }
+@media (max-width: 1024px) {
+  .card-content:nth-child(2) {
+    border-color: transparent;
+  }
+}
+
 .number {
   font-size: 1.563rem;
   font-weight: 700;
@@ -243,6 +309,15 @@ img {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 3.75rem;
   column-gap: 3.125rem;
+}
+@media (max-width: 1024px) {
+  .plans-box {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
+  .center {
+    justify-self: center;
+  }
 }
 
 .avilable-plans {
@@ -320,6 +395,12 @@ img {
   align-items: center;
   gap: 3.711rem;
 }
+@media (max-width: 1024px) {
+  .Our-partners {
+    justify-content: flex-start;
+    width: 6.35rem;
+  }
+}
 /* End Testimonials */
 /* Strat opinions*/
 
@@ -329,6 +410,11 @@ img {
   padding: 1.875rem;
   border-radius: 0.625rem;
   height: 14.375rem;
+}
+@media (max-width: 1024px) {
+  .opinion-box {
+    width: 100%;
+  }
 }
 
 .customer-info {
@@ -357,6 +443,12 @@ img {
   align-items: center;
   grid-column: 1/-1;
 }
+@media (max-width: 1024px) {
+  .buttols {
+    width: 100%;
+  }
+}
+
 .arrow {
   cursor: pointer;
 }
@@ -376,6 +468,11 @@ img {
   column-gap: 14.375rem;
   margin-bottom: 6.25rem;
 }
+@media (max-width: 1024px) {
+  .foooter-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 .icons {
   cursor: pointer;
@@ -387,6 +484,21 @@ img {
 .right-side {
   display: flex;
   gap: 7.875rem;
+}
+@media (max-width: 1024px) {
+  .right-side {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 .links-ft {
   display: flex;
