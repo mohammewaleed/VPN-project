@@ -15,6 +15,8 @@ a {
 }
 body {
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
 }
 
 html {
@@ -49,6 +51,20 @@ img {
   display: grid;
   row-gap: 7.259rem;
 }
+.card {
+  grid-column: 1/-1;
+  display: flex;
+  margin: 6.563rem auto;
+  background-color: var(--white-bg);
+  box-shadow: 0 2.2rem 2.7rem 0 #24242945;
+  border-radius: 1rem;
+  padding: 2.326rem 5.688rem;
+  justify-content: center;
+}
+.card-footer-pd {
+  margin: -4.064rem 0;
+  max-height: 14.375rem;
+}
 .Section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -78,7 +94,7 @@ img {
     #f8f8f8 -45.04%,
     rgba(248, 248, 248, 0) 88.56%
   );
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: -1;
 }
@@ -103,7 +119,6 @@ img {
   font-size: 2.188rem;
   width: 23.963rem;
   height: 6.25rem;
-  line-height: 3.125rem;
   font-weight: var(--font-weight-500);
 }
 .descreption {
@@ -111,7 +126,6 @@ img {
   font-weight: var(--font-weight-400);
   width: 34.688rem;
   height: 3.75rem;
-  line-height: 1.875rem;
   margin-top: 1.25rem;
 }
 .def-width {
@@ -179,7 +193,6 @@ img {
 /* Start Landing */
 .title {
   font-size: 3.125rem;
-  line-height: 4.375rem;
   font-weight: var(--font-weight-500);
   font-weight: var(--font-weight-500);
 }
@@ -197,17 +210,6 @@ img {
   margin-bottom: 0.938rem;
 }
 
-.card {
-  grid-column: 1/-1;
-  display: flex;
-  margin: 6.563rem auto;
-  background-color: var(--white-bg);
-  box-shadow: 0 2.2rem 2.7rem 0 #24242945;
-  border-radius: 1rem;
-  padding: 2.326rem 5.688rem;
-  justify-content: center;
-  width: 71.25rem;
-}
 .card-content {
   display: flex;
   align-items: center;
@@ -222,12 +224,10 @@ img {
 .number {
   font-size: 1.563rem;
   font-weight: 700;
-  line-height: 1.875rem;
   margin-bottom: 0.313rem;
 }
 .Users {
   font-size: 1.25rem;
-  line-height: 1.875rem;
   font-weight: var(--font-weight-400);
 }
 /* End Features */
@@ -274,7 +274,6 @@ img {
 .sallry,
 .month {
   font-size: 1.563rem;
-  line-height: 1.875rem;
 }
 
 .sallry {
@@ -351,7 +350,6 @@ img {
 }
 .opinion-text {
   font-weight: var(--font-weight-400);
-  line-height: 1.875rem;
 }
 .buttols {
   display: flex;
@@ -365,31 +363,38 @@ img {
 /* End opinions */
 
 /* Start footer */
-.space-between {
-  justify-content: space-between;
-}
 .height-60px {
   height: 3.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer {
+
+.foooter-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 14.375rem;
+  margin-bottom: 6.25rem;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.copyrights {
+  color: #afb5c0;
+}
+.right-side {
+  display: flex;
+  gap: 7.875rem;
+}
+.links-ft {
   display: flex;
   flex-direction: column;
-  position: relative;
-  align-items: center;
+  gap: 0.625rem;
 }
-.footer::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(
-    180deg,
-    #f8f8f8 -45.04%,
-    rgba(248, 248, 248, 0) 88.56%
-  );
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.tilte-links-ft {
+  margin-bottom: 1.25rem;
 }
+
 /* End footer */
