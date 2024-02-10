@@ -492,7 +492,5 @@ input[type="checkbox"] {
   .right-side {
     flex-direction: column;
   }
-  .foooter-content {
-  }
 }
 /* End Responsive styles */
