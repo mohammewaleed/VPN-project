@@ -54,13 +54,9 @@ input[type="checkbox"] {
 .container {
   max-width: var(--max-width-desktop);
   margin: 0 auto;
+  padding-inline: 1.875rem;
   display: grid;
   row-gap: 7.259rem;
-}
-@media (max-width: 1024px) {
-  .container {
-    max-width: var(--max-width-tablet);
-  }
 }
 .card {
   grid-column: 1/-1;
@@ -73,42 +69,19 @@ input[type="checkbox"] {
   justify-content: center;
   max-width: 100%;
 }
-@media (max-width: 1024px) {
-  .card {
-    flex-wrap: wrap;
-  }
-}
 .card-footer-pd {
   margin: -4.064rem 0;
-}
-@media (max-width: 1024px) {
-  .card-footer-pd {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
 }
 .Section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
-@media (max-width: 1024px) {
-  .Section {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 5rem;
-  }
-}
 .three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3.125rem;
   row-gap: 3.75rem;
-}
-@media (max-width: 1024px) {
-  .three-columns {
-    grid-template-columns: 1fr;
-  }
 }
 .landing-gap {
   column-gap: 2.548rem;
@@ -158,8 +131,8 @@ input[type="checkbox"] {
 .descreption {
   color: var(--text-color);
   font-weight: var(--font-weight-400);
-  width: 34.688rem;
-  height: 3.75rem;
+  /* width: 34.688rem; */
+  /* height: 3.75rem; */
   margin-top: 1.25rem;
 }
 .def-width {
@@ -185,11 +158,6 @@ input[type="checkbox"] {
 .toggle {
   display: none;
 }
-@media (max-width: 1024px) {
-  .toggle {
-    display: block;
-  }
-}
 /* End bar toggel */
 /* Satrt Hearder */
 .header {
@@ -201,15 +169,6 @@ input[type="checkbox"] {
 .links-list {
   display: flex;
   gap: 4rem;
-}
-@media (max-width: 1024px) {
-  .links-list {
-    display: none;
-  }
-  .sing-in,
-  .sing-up {
-    display: none;
-  }
 }
 .links {
   font-weight: var(--font-weight-400);
@@ -281,11 +240,6 @@ input[type="checkbox"] {
   border-left: 0.2rem solid #eeeff2;
   border-right: 0.2rem solid #eeeff2;
 }
-@media (max-width: 1024px) {
-  .card-content:nth-child(2) {
-    border-color: transparent;
-  }
-}
 
 .number {
   font-size: 1.563rem;
@@ -309,15 +263,6 @@ input[type="checkbox"] {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 3.75rem;
   column-gap: 3.125rem;
-}
-@media (max-width: 1024px) {
-  .plans-box {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 4rem;
-  }
-  .center {
-    justify-self: center;
-  }
 }
 
 .avilable-plans {
@@ -388,18 +333,13 @@ input[type="checkbox"] {
 .Global {
   margin-top: 9.738rem;
   margin-bottom: 2.238rem;
+  width: 100%;
 }
 .Our-partners {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3.711rem;
-}
-@media (max-width: 1024px) {
-  .Our-partners {
-    justify-content: flex-start;
-    width: 6.35rem;
-  }
 }
 /* End Testimonials */
 /* Strat opinions*/
@@ -410,11 +350,6 @@ input[type="checkbox"] {
   padding: 1.875rem;
   border-radius: 0.625rem;
   height: 14.375rem;
-}
-@media (max-width: 1024px) {
-  .opinion-box {
-    width: 100%;
-  }
 }
 
 .customer-info {
@@ -443,11 +378,6 @@ input[type="checkbox"] {
   align-items: center;
   grid-column: 1/-1;
 }
-@media (max-width: 1024px) {
-  .buttols {
-    width: 100%;
-  }
-}
 
 .arrow {
   cursor: pointer;
@@ -468,11 +398,6 @@ input[type="checkbox"] {
   column-gap: 14.375rem;
   margin-bottom: 6.25rem;
 }
-@media (max-width: 1024px) {
-  .foooter-content {
-    grid-template-columns: 1fr;
-  }
-}
 
 .icons {
   cursor: pointer;
@@ -485,21 +410,6 @@ input[type="checkbox"] {
   display: flex;
   gap: 7.875rem;
 }
-@media (max-width: 1024px) {
-  .right-side {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-  }
-  .left-side {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-}
 .links-ft {
   display: flex;
   flex-direction: column;
@@ -510,3 +420,44 @@ input[type="checkbox"] {
 }
 
 /* End footer */
+
+/* Start Responsive styles */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1025px) {
+  .links-list {
+    gap: 3rem;
+  }
+  .buttons {
+    gap: 2rem;
+  }
+  .Our-partners {
+    flex-wrap: wrap;
+  }
+  .plans-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.125rem;
+  }
+  .card {
+    flex-wrap: wrap;
+  }
+  .card-content:nth-child(2) {
+    border-color: transparent;
+  }
+  .three-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* End Responsive styles */
