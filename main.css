@@ -68,7 +68,6 @@ input[type="checkbox"] {
   padding: 2.326rem 5.688rem;
   justify-content: center;
   max-width: 100%;
-  z-index: -1;
 }
 .card-footer-pd {
   margin: 4.064rem auto;
@@ -77,7 +76,6 @@ input[type="checkbox"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  z-index: -1;
 }
 .three-columns {
   display: grid;
@@ -170,6 +168,7 @@ input[type="checkbox"] {
   position: sticky;
   top: 0;
   background-color: var(--white-bg);
+  z-index: 9999;
 }
 .links-list {
   display: flex;
